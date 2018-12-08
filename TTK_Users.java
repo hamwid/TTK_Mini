@@ -1,23 +1,31 @@
 import java.util.ArrayList;
 
 public class TTK_Users {
-  ArrayList<User> users = new ArrayList<User>();
-}
+  public static ArrayList<User> users = new ArrayList<User>();
 
-private class User {
-  private String username;
-  private String password;
+  public void addUser(String username, String password){
+    User user = new User();
+    user.setUsername(username);
+    user.setPassowrd(password);
+    users.add(user);
+  }
 
-  public void setUsername(String input){
-    username = input;
+  private class User {
+    private String username;
+    private String password;
+
+    public void setUsername(String input){
+      username = input;
+    }
+    public void setPassowrd(String input){
+      password = input;
+    }
+    public String getUsername(String input){
+      return username;
+    }
+    public String getPassowrd(String input){
+      return password;
+    }
   }
-  public void setPassowrd(String input){
-    password = input;
-  }
-  public string getUsername(String input){
-    return username;
-  }
-  public string getPassowrd(String input){
-    return password;
-  }
+
 }
