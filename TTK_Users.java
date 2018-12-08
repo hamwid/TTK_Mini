@@ -9,8 +9,11 @@ public class TTK_Users {
     user.setPassowrd(password);
     users.add(user);
   }
+  public ArrayList<User> getUsers(){
+    return users;
+  }
 
-  private class User {
+  public class User {
     private String username;
     private String password;
 
@@ -20,12 +23,11 @@ public class TTK_Users {
     public void setPassowrd(String input){
       password = input;
     }
-    public String getUsername(String input){
+    public String getUsername(){
       return username;
     }
-    public String getPassowrd(String input){
+    public String getPassowrd(){
       return password;
     }
   }
-
 }
